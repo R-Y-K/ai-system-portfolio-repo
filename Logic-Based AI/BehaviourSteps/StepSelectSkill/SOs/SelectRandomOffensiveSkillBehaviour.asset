@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2eaa79fca3f8b644872bc1ae423749a, type: 3}
+  m_Name: SelectRandomOffensiveSkillBehaviour
+  m_EditorClassIdentifier: 
+  enterConditions:
+  - {fileID: 11400000, guid: d88924960dedb634b8c1531e097963dc, type: 2}
+  cannotEnterConditions: []
+  isCompleteConditions:
+  - {fileID: 11400000, guid: 15be45481bc0d814eb10160f9e0b25d9, type: 2}
+  debugMode: 0
+  skillType: 0
+  selectSkillCriteria: {fileID: 11400000, guid: 6d9b8a8c5ba232449914c38a107f739a, type: 2}

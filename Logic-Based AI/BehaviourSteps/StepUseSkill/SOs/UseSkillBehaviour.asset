@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe19accfdb0f1b4ba790aa9b8e5886c, type: 3}
+  m_Name: UseSkillBehaviour
+  m_EditorClassIdentifier: 
+  enterConditions:
+  - {fileID: 11400000, guid: 15be45481bc0d814eb10160f9e0b25d9, type: 2}
+  cannotEnterConditions:
+  - {fileID: 11400000, guid: c6699358880d01645ba58a49e5edd78d, type: 2}
+  - {fileID: 11400000, guid: 7ad30a9b10bb1b94b8d1d45af9307c51, type: 2}
+  isCompleteConditions:
+  - {fileID: 11400000, guid: d88924960dedb634b8c1531e097963dc, type: 2}
+  debugMode: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3628ca71c84914db041b6a09b743d4, type: 3}
+  m_Name: GoalEngageEnemiesWithRandomSkill
+  m_EditorClassIdentifier: 
+  enterConditions:
+  - {fileID: 11400000, guid: 63b74481770c6ff4b90ce915bc234f5b, type: 2}
+  cannotEnterConditions:
+  - {fileID: 11400000, guid: 533edea8034975c4696c34a08bb20c39, type: 2}
+  isCompleteConditions:
+  - {fileID: 11400000, guid: 533edea8034975c4696c34a08bb20c39, type: 2}
+  debugMode: 0
+  stepBehaviours:
+  - {fileID: 11400000, guid: 819281eb6b4b7c146ace79ad91435bbc, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdd2084ad03e594b8284734a6cfcee1, type: 3}
+  m_Name: StepFollowPlayerWhenNotInCombat
+  m_EditorClassIdentifier: 
+  enterConditions: []
+  cannotEnterConditions: []
+  isCompleteConditions: []
+  debugMode: 0
+  stepStates:
+  - {fileID: 11400000, guid: 683a789c9daaf224c8167b892c2c8078, type: 2}
