@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 In case it was not clear, this is not Large Language Model AI, but a Logic-Based AI. No ChatGPT or Claude self-aware AI here folks.
 
@@ -12,7 +12,7 @@ who has no technical or system design expertise.
 I'll try to go over how the AI works and try to explain it in detail with flowcharts and diagrams, that someone who would be interested
 in hiring me would be able gauge my skills and whether I would be a good fit for the team or not.
 
-# Disclaimer
+## Disclaimer
 
 Before we even start, I want to make it absolutely clear that I'll be completely focusing on the AI system
 itself here, while leaving the components that are needed for the AI to work out.
@@ -25,7 +25,7 @@ on those components themselves, but for the outputs that the assigned components
 What this means is that if you want to use this AI, and want to write the your own custom systems that produce the required outputs yourself,
 rather than using the ones I used for the Valiant Attempt, it should be possible to do so.
 
-# About how the AI system works.
+## About how the AI system works.
 
 Okay let's start.
 
@@ -47,11 +47,11 @@ which decides how the AI is being run and if multiple conditions overlap
 the condition that before has the priority over the current one. There will be a proper prioritization
 system in the future, but right now it's not important enough for me to take into consideration.
 
-# 1st Layer: MasterController I.e. The Strategy Layer of the AI.
+### 1st Layer: MasterController I.e. The Strategy Layer of the AI.
 
 (put flowchart here)
 
-In here, the AI will act based on the current active conditions, which BehaviourController I.e. Strategy Behaviour to use for the AI.
+In here, the AI will act based on the current active conditions, which BehaviourController I.e. Strategy to use for the AI.
 So as an example, this could be the layer where we decide whether the AI is following the player, in active combat, patrolling, idling or whatever.
 
 As for an example for what triggers the change of behaviour:
@@ -60,8 +60,6 @@ If there are enemies nearby, or player is in combat, or whatever. The MasterCont
 If there are no enemies nearby, they are all dead or the combat is over, the MasterController switches to "FollowPlayer" behaviour.
 If the player is interacting with something or speaking to someone in the game, the game is paused or whatever. The AI goes to "Idle" or "Suspended" mode.
 
-This functionality is identical to every single layer, except
-
-2nd Layer:
-3rd Layer:
-4th Layer:
+### 2nd Layer: BehaviourController I.e. The Tactics Layer of the AI.
+### 3rd Layer: GoalBehaviourController I.e. The Goal Layer of the AI.
+### 4th Layer: StepBehaviourController I.e. The Step/Action Layer of the AI.
