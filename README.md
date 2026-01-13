@@ -27,7 +27,7 @@ rather than using the ones I used for the Valiant Attempt, it should be possible
 
 Okay let's start.
 
-![AI System Overview](Images AI System High-Concept Class Diagram.png)
+![AI System Overview](Images/AI System High-Concept Class Diagram.png)
 
 As you can see, there are four layers for the main AI function loop.
 
