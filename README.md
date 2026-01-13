@@ -42,8 +42,10 @@ In the case of GoalBehaviour, only one STATE can be active at same time, but in 
 ALL the StepBehaviours attached with the StepBehaviourController are running at the same time. I'll give example 
 of what the difference is and why I've done it this way while we go through the different layers of the AI decision making.
 
-In short, functionality of this AI is all about managing the conditions of the behaviours, which decides how the AI is being run and if multiple conditions overlap,
-there will be a prioritization system in the future, but right now it's not important enough for me to take into consideration.
+In short, functionality of this AI is all about managing the conditions of the behaviours,
+which decides how the AI is being run and if multiple conditions overlap
+the condition that before has the priority over the current one. There will be a proper prioritization
+system in the future, but right now it's not important enough for me to take into consideration.
 
 # 1st Layer: MasterController I.e. The Strategy Layer of the AI.
 
