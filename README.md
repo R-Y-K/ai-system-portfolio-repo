@@ -49,7 +49,7 @@ system in the future, but right now it's not important enough for me to take int
 
 ### 1st Layer: MasterController I.e. The Strategy Layer of the AI.
 
-![Strategy Layer Diagram](images/Strategy Layer Diagram for Portfolio.png)
+![Strategy Layer Diagram](images/Strategy-Layer-Diagram-for-Portfolio)
 
 In here, the AI will act based on the current active conditions, which BehaviourController I.e. Strategy to use for the AI.
 So as an example, this could be the layer where we decide whether the AI is following the player, in active combat, patrolling, idling or whatever.
