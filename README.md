@@ -13,7 +13,7 @@ in hiring me would be able gauge my skills and whether I would be a good fit for
 # Disclaimer
 
 Before we even start, I want to make it absolutely clear that I'll be completely focusing on the AI system
-itself here,while leaving the components that are needed for the AI to work out.
+itself here, while leaving the components that are needed for the AI to work out.
 
 There are many, many components that are needed for the AI to be able to function, which I will not be explaining in detail here,
 because it would way too verbose, and again I want to focus on the AI system, rather than whole which makes it possible for the AI to function.
@@ -27,7 +27,7 @@ rather than using the ones I used for the Valiant Attempt, it should be possible
 
 Okay let's start.
 
-Put Flowchart here.
+![AI System Overview](Images AI System High-Concept Class Diagram.png)
 
 As you can see, there are four layers for the main AI function loop.
 
