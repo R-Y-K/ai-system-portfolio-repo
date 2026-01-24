@@ -12,7 +12,7 @@ I'll try to go over how the AI works and try to explain it in detail with flowch
 ## Disclaimer
 
 Before we start, I want to make it absolutely clear that I'll be completely focusing on the AI system
-itself here, while leaving the components that are needed for the AI to work out.
+itself here, while leaving the components that are needed for the AI to work, out of the scope for system.
 
 There are many, many components that are needed for the AI to be able to function, which I will not be explaining or sharing here, because it would way too verbose. I will explain the main execution flow of how the AI works, rather than the ecosystem which makes running the AI possible, which is massive.
 
