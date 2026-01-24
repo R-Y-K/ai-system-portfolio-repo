@@ -1,0 +1,92 @@
+@startuml AI System Class Diagram For Portfolio
+title AI System Class Diagram
+
+package "AI" #DDDDDD
+{
+  package "Role Layer" #DDDDDD
+  {
+  'AI Behaviour Controllers'
+  class MasterController
+  MasterController : List<BehaviourControllerSO> behaviourControllers
+
+  note left of MasterController
+  Coordinates all behaviour controllers
+  inside MasterController for the
+  NPC / AI character it is attached to.
+  end note
+
+  note right of MasterController
+  Individual behaviour controllers below
+  are controlled by the MasterController.
+  end note
+  }
+
+  note "Condition" as N1
+
+  package "Tactics Layer" #DDDDDD
+  {
+  class BehaviourControllerSO <<ScriptableObject>>
+  BehaviourControllerSO : List<GoalBehaviourControllerSO> goalBehaviourControllers
+  MasterController --> N1
+  N1 --> BehaviourControllerSO
+
+  note left of BehaviourControllerSO
+  Coordinates goal behaviour controllers
+  inside BehaviourControllerSO, which
+  are responsible for the runtime
+  of the intended behaviour.
+  end note
+
+  note right of BehaviourControllerSO
+  Individual goal behaviours below are
+  controlled by BehaviourController.
+  end note
+  }
+
+note "Condition" as N2
+
+  package "Goal Layer" #DDDDDD
+  {
+  class GoalBehaviourControllerSO <<ScriptableObject>>
+  GoalBehaviourControllerSO : List<StepBehaviourControllerSO>
+  BehaviourControllerSO --> N2
+  N2 --> GoalBehaviourControllerSO
+
+  note left of GoalBehaviourControllerSO
+  Coordinates step behaviours controllers
+  inside GoalBehaviourControllerSO, in
+  order to achieve the intended goal
+  of the goal behaviour.
+  end note
+
+  note right of GoalBehaviourControllerSO
+  Individual step behaviours below are
+  controlled by the GoalBehaviourController.
+  end note
+  }
+
+note "Condition" as N3
+
+  package "Step Layer" #DDDDDD
+  {
+  class StepBehaviourControllerSO <<ScriptableObject>>
+  StepBehaviourControllerSO : List<StepBehaviour> stepBehaviours
+  GoalBehaviourControllerSO --> N3
+  N3 --> StepBehaviourControllerSO
+
+  note left of StepBehaviourControllerSO
+  Is responsible for running step behaviours
+  inside StepBehaviourControllerSO in order
+  to reach the goal of the goal behaviour.
+  end note
+
+  note right of StepBehaviourControllerSO
+  Step behaviour controller runs multiple
+  step behaviours in parallel, in order
+  to achieve goal of the goal behaviour.
+  end note
+  }
+}
+
+
+@enduml

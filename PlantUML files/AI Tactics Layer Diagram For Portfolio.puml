@@ -1,0 +1,58 @@
+@startuml AI Tactics Layer Diagram For Portfolio
+title AI Tactics Layer Diagram
+top to bottom direction
+package "AI" #DDDDDD
+{
+  package "Tactics Layer" #DDDDDD
+  {
+    
+  class BehaviourControllerSO <<ScriptableObject>>
+
+  class IdleBehaviour <<BehaviourControllerSO>>
+  class CombatBehaviour <<BehaviourControllerSO>>
+  class CompanionBehaviour <<BehaviourControllerSO>>
+
+  BehaviourControllerSO -[hidden]-> IdleBehaviour
+  BehaviourControllerSO -[hidden]-> CombatBehaviour
+  BehaviourControllerSO -[hidden]-> CompanionBehaviour
+
+  note top of BehaviourControllerSO
+  BehaviourControllerSO holds
+  goal behaviours which dictate 
+  "how" role of the NPC is run.
+  end note
+
+  note left of BehaviourControllerSO
+  IdleBehaviour, CombatBehaviour
+  and CompanionBehaviour inherit
+  this base class.
+  end note
+
+  note right of BehaviourControllerSO
+  It holds all goal behaviours, which
+  are needed in order to achieve
+  "goals" of the expected role.
+  end note
+  }
+
+  note "Do Nothing" as N1
+  note "Attack Enemies" as N2
+  note "Follow Player" as N3
+  
+  package "Goal Layer" #DDDDDD
+  {
+    class Idle <<GoalBehaviourControllerSO>>
+    class AttackNearestEnemy <<GoalBehaviourControllerSO>>
+    class FollowPlayerInFormation<<GoalBehaviourControllerSO>>
+
+  IdleBehaviour --> N1
+  N1 --> Idle
+
+  CombatBehaviour --> N2
+  N2 --> AttackNearestEnemy
+
+  CompanionBehaviour --> N3
+  N3 --> FollowPlayerInFormation
+  }
+} 
+@enduml  
