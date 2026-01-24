@@ -18,6 +18,10 @@ There are many, many components that are needed for the AI to be able to functio
 
 This AI is designed to be modular in way so it's not inherently dependant on the systems or components that it is using, but for the outputs that the assigned components produce. What this means is that if you were to use this AI, and want to write the your own custom systems that produce the required outputs for the required inputs that the AI needs to function, it should be possible to do so.
 
+## Why this approach?
+
+I designed this AI system to support scalable NPC behaviors without hard-coding decision trees per character. By separating role, tactics, intent, and action execution, the system allows new behaviors to be composed through data and conditions rather than rewriting logic inside the scripts.
+
 ## About how the AI system works.
 
 ![AI System Class Diagram](Images/AI-System-Class-Diagram-For-Portfolio.png)
@@ -31,6 +35,8 @@ Each layer is an individual finite state machine responsible for running differe
 Each layer controls the controller of the layer below it, this creates a execution flow in which each layer runs different controllers for the states below them, based on the conditions in the controller controlling the layers.
 
 Every state machine runs the same way, running one state at a time with the priority being the one on top of the list, with the exception being the StepBehaviourController in Step/Action Layer, in which we need to run and manage actions in parallel, in order to make the AI able to do multiple actions at the same time.
+
+If there is need to add new behaviors, they can be introduced by adding new controllers and conditions through the use ScriptableObjects, without modifying existing AI layers.
 
 ### 1st Layer: MasterController I.e. The Role Layer of the AI.
 
