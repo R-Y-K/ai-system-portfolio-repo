@@ -5,7 +5,7 @@ If it's not clear, this is not Large Language Model (LLM) AI, but a Logic-Based 
 This repo contains the AI system that I used for the Ticorporate Demo Lab Project Valiant Attempt.
 If you're not a programmer, and/or don't know how finite state machines, behaviour trees and rule-based decision making works,  this description will likely go over your head.
 
-I've done my best to try to explain it in succint and clear manner, but I'm not sure how well I can explain this in to another programmer, let alone to someone who has no programming, technical or system design expertise when it come to logic-based AI.
+I've done my best to try to explain it in succint and clear manner, but I'm not sure how well I can explain this in to another programmer, let alone to someone who has no programming, technical or system design expertise when it comes to logic-based AI.
 
 I'll try to go over how the AI works and try to explain it in detail with flowcharts and diagrams, that someone who would be interested in hiring me would be able gauge my skills and whether I would be a good fit for the team or not.
 
